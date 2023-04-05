@@ -111,3 +111,19 @@ jar-no-fork 这个是一个什么目标？
 在 `<executions>` 元素下，定义了一个执行项。`<phase>` 子元素指定插件要在 Maven 构建的哪个生命周期阶段执行，这里是 `compile` 阶段，也就是编译阶段。`<goals>` 元素则指定了要执行的插件目标，这里是 `jar`，表示生成 Javadoc 文档并打成 jar 包。
 
 因此，该配置的含义是在 Maven 的 `compile` 阶段执行 `maven-javadoc-plugin` 插件的 `jar` 目标，生成 Javadoc 文档并打成 jar 包。在执行过程中，还可以使用配置选项来调整文档的生成方式和输出结果。
+
+
+
+maven-source-plugin：用于将项目的源代码打包成一个jar文件，并发布到Maven仓库中供其他项目引用。
+
+maven-javadoc-plugin：用于生成Java代码的API文档，并发布到Maven仓库中供其他项目引用。
+
+maven-gpg-plugin：用于对发布的Maven仓库文件进行数字签名，以确保文件的完整性和真实性。
+
+nexus-staging-maven-plugin：用于将项目发布到Nexus仓库，这是一个用于管理Java项目的开源仓库管理器。此插件用于处理项目在发布过程中的各种任务，包括验证、部署、审核、自动发布等。
+
+maven-surefire-plugin：用于运行项目的单元测试。
+
+maven-jar-plugin：用于将项目打包成一个可执行的jar文件，并指定主类。
+
+maven-dependency-plugin：用于将项目依赖的jar文件复制到指定的目录中，以便打包时使用。

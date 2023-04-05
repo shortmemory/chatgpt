@@ -53,7 +53,7 @@ public class ConsoleChatGPT {
         String useProxy = getInput("按两次回车以提交:\n");
         if (useProxy.equalsIgnoreCase("y")) {
 
-            // 输入代理地址
+            // 请输入代理类型
             System.out.println("请输入代理类型(http/socks): ");
             String type = getInput("按两次回车以提交:\n");
 
@@ -96,7 +96,6 @@ public class ConsoleChatGPT {
 
             System.out.println("AI: ");
 
-
             //卡住
             CountDownLatch countDownLatch = new CountDownLatch(1);
 
@@ -121,7 +120,6 @@ public class ConsoleChatGPT {
             }
 
         }
-
 
     }
 
